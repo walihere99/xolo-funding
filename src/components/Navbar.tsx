@@ -103,9 +103,9 @@ export function Navbar() {
 
           {/* Actions (Desktop Only) */}
           <div className="hidden md:flex items-center gap-4 ml-4">
-            <button className="px-6 py-2.5 rounded-lg border border-white/20 text-white font-syne font-bold text-sm tracking-wide hover:bg-white/5 transition-colors duration-300">
+            <Link to="/login" className="px-6 py-2.5 rounded-lg border border-white/20 text-white font-syne font-bold text-sm tracking-wide hover:bg-white/5 transition-colors duration-300 text-center">
               LOGIN
-            </button>
+            </Link>
             <button className="group relative px-6 py-2.5 bg-white text-black rounded-lg font-syne font-bold text-sm overflow-hidden transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
               <span className="relative z-10">GET FUNDED</span>
@@ -219,9 +219,9 @@ export function Navbar() {
                 </Link>
 
                 <div className="pt-4 flex flex-col gap-3">
-                  <button className="w-full px-6 py-4 rounded-lg border border-white/20 text-white font-syne font-bold text-lg tracking-wide hover:bg-white/5 transition-colors duration-300">
+                  <Link to="/login" className="w-full px-6 py-4 rounded-lg border border-white/20 text-white font-syne font-bold text-lg tracking-wide hover:bg-white/5 transition-colors duration-300 text-center">
                     LOGIN
-                  </button>
+                  </Link>
                   <button className="w-full group relative px-6 py-4 bg-white text-black rounded-lg font-syne font-bold text-lg overflow-hidden transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                     <span className="relative z-10">GET FUNDED</span>

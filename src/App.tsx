@@ -24,6 +24,10 @@ import { ComplaintsPolicy } from './pages/ComplaintsPolicy';
 import { TermsAndConditions } from './pages/TermsAndConditions';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { Platforms } from './pages/Platforms';
+import { Login } from './pages/Login';
+import { Signup } from './pages/Signup';
+import { Careers } from './pages/Careers';
+import { Affiliates } from './pages/Affiliates';
 
 // Extracted the homepage content into its own component
 function Home() {
@@ -101,6 +105,10 @@ export default function App() {
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/platforms" element={<Platforms />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/affiliates" element={<Affiliates />} />
           </Routes>
         </div>
 
