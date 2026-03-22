@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-brand: #025ee4;
+  --color-success: #4ade80;
+  --color-bg: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.45);
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-border-default: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(2, 94, 228, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-primary font-syne antialiased overflow-x-hidden;
+  }
+  
+  /* Prevent casual image downloading */
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer utilities {
+  .clip-angled {
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative overflow-hidden transition-all duration-300;
+  }
+  
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-b from-white/[0.08] to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+  }
+  
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .glass-panel {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.05] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl;
+  }
+  
+  .text-ghost {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+  }
+
+  .text-ghost-blue {
+    -webkit-text-stroke: 1px rgba(2, 94, 228, 0.5);
+    color: transparent;
+  }
+  
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 30s linear infinite;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite;
+  }
+}
