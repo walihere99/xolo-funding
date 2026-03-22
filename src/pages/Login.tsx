@@ -64,7 +64,7 @@ export function Login() {
             <div className="space-y-2 group">
               <div className="flex justify-between items-center ml-1">
                 <label className="text-sm font-medium text-gray-300 group-focus-within:text-brand transition-colors">Password</label>
-                <a href="#" className="text-xs text-brand hover:text-brand/80 transition-colors">Forgot password?</a>
+                <Link to="/forgot-password" className="text-xs text-brand hover:text-brand/80 transition-colors">Forgot password?</Link>
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500 transition-colors group-focus-within:text-brand">

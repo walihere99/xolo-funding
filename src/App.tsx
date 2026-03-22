@@ -28,6 +28,7 @@ import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Careers } from './pages/Careers';
 import { Affiliates } from './pages/Affiliates';
+import { ForgotPassword } from './pages/ForgotPassword';
 
 // Extracted the homepage content into its own component
 function Home() {
@@ -107,6 +108,7 @@ export default function App() {
             <Route path="/platforms" element={<Platforms />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/affiliates" element={<Affiliates />} />
           </Routes>
